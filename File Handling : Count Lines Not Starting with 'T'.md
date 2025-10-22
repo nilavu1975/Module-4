@@ -13,7 +13,22 @@ To write a Python program that counts the number of lines in a text file `story.
 
 ## 🧾 Program
 Add code here
+```
+import csv
+with open('story.csv', 'w') as f:
+    f.write("The sun rise in east\n")
+    f.write("Hello guy.\n")
 
+count = 0
+with open('story.csv', 'r') as file:
+    for line in file:
+        if not line.startswith('T'):
+            count += 1
+
+print("Lines not starting with 'T':", count)
+```
 ## Output
+<img width="1121" height="287" alt="85" src="https://github.com/user-attachments/assets/3301b614-bdea-4591-b356-00836f16e6ce" />
 
 ## Result
+Thus,the above program was executed successfully.
